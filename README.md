@@ -1,7 +1,6 @@
 # NaMie Official Website
 
 ![Logo](/src/images/logo.png)
-Practical Exam Purpose
 
 ## Authors
 
