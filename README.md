@@ -2,7 +2,7 @@
 
 ![Logo](/src/images/logo.png)
 
-## Authors
+## Author
 
 - [@Billy A. Wijaya](https://www.github.com/tomballz)
 
