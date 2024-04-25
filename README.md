@@ -1,6 +1,6 @@
 # NaMie Official Website
 
-![Logo](http://127.0.0.1:5500/src/images/logo.png)
+![Logo](/src/images/logo.png)
 Practical Exam Purpose
 
 ## Authors
