@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaMie</title>
+    <link rel="stylesheet" href="src/global.css"/>
+    <link rel="icon" href="src/images/logo.png" type="image/png" sizes="60x60"/>
+</head>
+<body>
+    
+    <div class="navbar">
+            <ul>
+                <li class="nav-container">
+                    <a href="/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-container">
+                    <a href="/about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-container">
+                    <a href="/purchase.html" class="nav-link">Purchase</a>
+                </li>
+                
+            </ul>
+            <div>
+                <a href="/about.html">
+                    <img src="src/images/logo.png" alt="NaMie" class="logo namie"/>
+                </a>
+                <a href="https://github.com/tomballz/namie-web">
+                    <img src="src/images/github.png" alt="GitHub" class="logo github"/>
+                </a>
+            </div>
+
+    </div>
+
+    <div class="layout">
+        <div class="listCart">
+
+            <div class="listCartItems">
+                <img src="src/images/placeholder.png" alt="img"/>
+                <div class="content">
+                    <div class="quantity">1</div>
+                    <div class="name">Product name</div>
+                    <div class="pricecount">IDR 55.000,-</div>
+                </div>
+                
+                <div class="Qty">
+                    <button onclick="changeQty()">+</button>
+                    <button onclick="changeQty()">-</button>
+                </div>
+            </div>
+
+        </div>
+    
+        <div class="bio">
+            <p id="title2">Checkout</p>
+    
+            <div class="form">
+                <div class="group">
+                    <label for="name">Full Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+    
+                <div class="group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" id="phone">
+                </div>
+    
+                <div class="group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                </div>
+    
+                <div class="group">
+                    <label for="address">Address</label>
+                    <input type="text" name="address" id="address">
+                </div>
+            </div>
+    
+            <div class="return">
+                <div class="row">
+                    <div>Total Quantity</div>
+                    <div class="totalQuantity">1</div>
+                </div>
+                <div class="row">
+                    <div>Total Price</div>
+                    <div class="totalPrice">IDR 30.000,-</div>
+                </div>
+            </div>
+            
+            <button class="buttonCheckout">CHECKOUT</button>
+    
+        </div>
+    </div>
+
+    
+
+    <script src="src/checkoutHandler.js"></script>
+
+</body>
+</html>
