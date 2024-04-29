@@ -9,6 +9,7 @@
 body {
     background-color: #FFF7EF;
     font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -60,6 +61,14 @@ body {
     height: 60px;
     top: -10px;
 } 
+
+.cart {
+    right: 60px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
 
 .github {
     right: 10px;
@@ -124,6 +133,11 @@ body {
     text-align: justify;
 }
 
+#text2 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
 .grid {
     position: relative;
     justify-content: center;
@@ -139,8 +153,308 @@ body {
     padding: 350px 250px;
     border-radius: 10px;
     background-image: linear-gradient( to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    display: grid;
+    justify-content: center;
+    transition: all .5s ease;
+    background-repeat: no-repeat;
+    background-size: 500px;
 }
 
+.gridName {
+    color: #FFF7EF;
+    font-weight: 600;
+    position: absolute;
+    justify-self: center;
+    text-align: center;
+    font-size: xx-large;
+    top: 20px;
+    opacity: .9;
+}
+
+.gridPrice {
+    color: #FFF7EF;
+    font-weight: 500;
+    position: absolute;
+    justify-self: center;
+    text-align: center;
+    font-size: x-large;
+    bottom: 20px;
+    opacity: .8;
+}
+
+.gridDescription {
+    color: #FFF7EF;
+    font-weight: 500;
+    position: absolute;
+    justify-self: center;
+    text-align: justify;
+    width: 350px;
+    opacity: .8;
+    top: 70px;
+    transition: width .5s ease;
+}
+
+.gridButton {
+    background-color: #E58A4C;
+    border: none;
+    cursor: pointer;
+    color: #FFF7EF;
+    font-weight: 400;
+    position: absolute;
+    justify-self: center;
+    text-align: center;
+    font-size: x-large;
+    padding: 10px;
+    border-radius: 5px;
+    bottom: 100px;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.layout {
+    display: grid;
+    padding: 50px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    column-gap: 1vw;
+}
+
+.listCart {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat( 10, 90px);
+    row-gap: .5vw;
+    height: 80vh;
+}
+
+.listCartItems {
+    background-color: #7c695c;
+    width: 60vw;
+    border-radius: 10px;
+    background-image: linear-gradient( to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    display: grid;
+    grid-template-columns: 90px auto 45px;
+    color: #FFF7EF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.listCartItems img {
+    width: 90px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.listCartItems .content {
+    align-self: center;
+    font-size: large;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+}
+
+.listCartItems .content .quantity {
+    font-weight: 300;
+}
+
+
+.listCartItems .Qty {
+    display: grid;
+    padding: 10px;
+    row-gap: 5px;
+    align-items: center;
+    justify-content: right;
+}
+
+.Qty button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 5px;
+    color: #FFF7EF;
+    background-color: rgba(0, 0, 0, 0.247);
+}
+
+.Qty button:nth-child(1) {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.Qty button:nth-child(2) {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.bio {
+    background-color: #E58A4C;
+    position: relative;
+    width: 30vw;
+    height: 400px;
+    padding: 12px;
+    display: grid;
+    background-image: linear-gradient( to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+    border-radius: 10px;
+    align-items: start;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bio p {
+    color: #FFF7EF;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 5px;
+    border-bottom: 1px solid #FFF7EF;
+    padding-bottom: 10px;
+    color: #FFF7EF;
+    align-self: center;
+}
+
+.group input {
+    background-color: #FFF7EF;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
+    outline: none;
+}
+
+
+.return {
+    color: #FFF7EF;
+    display: grid;
+    padding-top: 10px;
+    align-self: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+
+.row:nth-child(2) {
+    padding-bottom: 10px;
+}
+
+.buttonCheckout {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    background-color: #FFF7EF;
+    color: #7c695c;
+    align-self: end;
+    outline: none;
+    cursor: pointer;
+}
+
+.cartMain {
+    background-color: #7c695c;
+    border-radius: 10px;
+    position: absolute;
+    right: 5px;
+    top: 45px;
+    z-index: 2;
+    width: 40%;
+    display: grid;
+    grid-template-columns: auto;
+    color: #FFF7EF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all .5s ease;
+    transform: translateX(110%);
+}
+
+.cartList {
+    padding: 5px;
+}
+
+.emptyCart {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: grid;
+    margin-bottom: 5px;
+    grid-template-columns: auto;
+    column-gap: 5px;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    color: #FFF7EF;
+}
+
+.cartItems {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: grid;
+    margin-bottom: 5px;
+    grid-template-columns: 48px auto 85px;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.cartItems img {
+    width: 48px;
+    border-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 2px;
+}
+
+.cartItems .content {
+    height: 100%;
+    display: grid;
+    padding: 1px;
+}
+.content .name {
+    font-weight: 600;
+}
+
+.cartItems .quantity button{
+    width: 24px;
+    height: 24px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.11);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    color: #FFF7EF;
+    cursor: pointer;
+}
+
+.quantity .value {
+    margin-inline: 4px;
+}
+
+.cartMain .checkout {
+    background-color: #E58A4C;
+    margin-top: -5px;
+    width: 100%;
+    border-radius: 10px;
+    transition: all .2s linear;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: #FFF7EF;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+}
 
 @media screen and (max-width: 565px) {
     .nav-container{margin: 5px;}
@@ -149,7 +463,12 @@ body {
 }
 
 @media screen and (max-width: 1200px) {
-    .gridItems{padding: 300px 200px;}
+    .gridItems{padding: 300px 200px; background-size: 400px;}
+    .gridDescription{width: 300px;}
+}
+
+@media screen and (max-width: 1100px) {
+    .listCartItems{width: 50vw;}
 }
 
 @media screen and (max-width: 950px) {
@@ -157,18 +476,38 @@ body {
 }
 
 @media screen and (max-width: 850px) {
-    .gridItems{padding: 250px 150px}
+    .gridItems{padding: 250px 150px; background-size: 300px;}
+    .gridDescription{width: 250px;}
+    .cartMain{width: 50%;}
 }
 
 @media screen and (max-width: 650px) {
-    .gridItems{padding: 200px 100px}
+    .gridItems{padding: 166px 100px; background-size: 200px;}
+    .gridName{font-size: x-large;}
+    .gridPrice{font-size: large;}
+    .gridButton{font-size: medium;}
+    .gridDescription{width: 150px; font-size: small;}
+    .cartMain{width: 60%;}
 }
 
 @media screen and (max-width: 650px) and (min-height: 1000px) {
     .grid{grid-template-columns: auto;}
+    .gridDescription{width: 150px; font-size: medium;}
+    .gridName{font-size: xx-large;}
+    .gridButton{font-size: x-large;}
+    .gridPrice{font-size: x-large;}
+    .gridItems:nth-child(1) .gridPrice{bottom: 381px;}
+    .gridItems:nth-child(1) .gridButton{bottom: 461px;}
+    .gridItems:nth-child(2) .gridName{top: 381px;}
+    .gridItems:nth-child(2) .gridDescription{top: 431px;}
 }
 
 @media screen and (max-width: 850px) and (min-height: 1500px) {
-    .gridItems{padding: 350px 250px}
+    .gridItems{padding: 350px 250px;}
     .grid{grid-template-columns: auto;}
+    .gridDescription{width: 350px;}
+    .gridItems:nth-child(1) .gridPrice{bottom: 750px;}
+    .gridItems:nth-child(1) .gridButton{bottom: 830px;}
+    .gridItems:nth-child(2) .gridName{top: 750px;}
+    .gridItems:nth-child(2) .gridDescription{top: 830px;}
 }
