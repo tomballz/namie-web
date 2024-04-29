@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "produk 1",
+        "price": 52433,
+        "image": "src/images/sdg8.png",
+        "backgroundimg":"src/images/placeholder2.png",
+        "description": "ini deskripsi 1"
+    },
+    {
+        "id": 2,
+        "name": "produk 2",
+        "price": 71532,
+        "image": "src/images/theme.png",
+        "backgroundimg":"src/images/placeholder2.png",
+        "description": "bukan deskripsi"
+    }
+]
