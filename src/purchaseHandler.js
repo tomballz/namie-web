@@ -53,9 +53,9 @@ function convertJSONHTML() {
             newProduct.id = "gridHover";
             newProduct.innerHTML = `
             <p class="gridName">${product.name}</p>
-            <p class="gridPrice">IDR ${formatNumber(product.price)},-</p>
             <p class="gridDescription">${product.description}</p>
             <button class="gridButton" onclick="addCart(${product.id})">Add to Cart</button>
+            <p class="gridPrice">IDR ${formatNumber(product.price)},-</p>
             `;
             productList.appendChild(newProduct);
             grids.push(newProduct);
