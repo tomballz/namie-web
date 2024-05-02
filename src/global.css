@@ -27,9 +27,9 @@ body {
     list-style-type: none;
     display: inline-block;
     position: relative;
-    margin: 30px;
-    padding: 20px;
+    margin: 50px;
     left: 9px;
+    transition: all .5s ease;
 }
 
 .nav-link {
@@ -37,6 +37,7 @@ body {
     background: none;
     text-decoration-line: none;
     font-size: 17px;
+    transition: all .5s ease;
 }
 
 .nav-container::after{
@@ -46,7 +47,7 @@ body {
     position: absolute;
     content: '';
     left: 0px;
-    top: 10px;
+    top: -10px;
     border-radius: 5px;
     transition: all .3s ease;
 }
@@ -146,56 +147,67 @@ body {
     grid-template-columns: auto auto;
     column-gap: 60px;
     row-gap: 60px;
+    transition: all .5s ease;
 }
 
 .gridItems {
     background-color: #7c695c;
-    padding: 350px 250px;
+    width: 27vw;
+    height: 45vw;
+    aspect-ratio: 3 / 5;
     border-radius: 10px;
     background-image: linear-gradient( to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
     display: grid;
+    grid-template-columns: auto;
     justify-content: center;
     transition: all .5s ease;
     background-repeat: no-repeat;
-    background-size: 500px;
+    background-size: cover;
 }
 
 .gridName {
     color: #FFF7EF;
     font-weight: 600;
-    position: absolute;
+    position: relative;
     justify-self: center;
     text-align: center;
-    font-size: xx-large;
+    font-size: 3vw;
+    height: 20%;
     top: 20px;
     opacity: .9;
+    transition: all .5s ease;
 }
 
 .gridPrice {
     color: #FFF7EF;
     font-weight: 500;
-    position: absolute;
+    position: relative;
     justify-self: center;
     text-align: center;
-    font-size: x-large;
-    bottom: 20px;
+    font-size: 1.7vw;
+    bottom: -9vw;
     opacity: .8;
+    height: 1vw;
+    transition: all .5s ease;
 }
 
 .gridDescription {
     color: #FFF7EF;
     font-weight: 500;
-    position: absolute;
+    position: relative;
     justify-self: center;
+    align-items: start;
     text-align: justify;
-    width: 350px;
+    text-wrap: wrap;
+    width: 22vw;
     opacity: .8;
-    top: 70px;
-    transition: width .5s ease;
+    top: -10vw;
+    transition: all .5s ease;
+    font-size: 1vw;
+    height: 4vw;
 }
 
 .gridButton {
-    background-color: #E58A4C;
     border: none;
     cursor: pointer;
     color: #FFF7EF;
@@ -203,12 +215,13 @@ body {
     position: absolute;
     justify-self: center;
     text-align: center;
-    font-size: x-large;
+    font-size: 1.5vw;
     padding: 10px;
     border-radius: 5px;
-    bottom: 100px;
+    bottom: 8vw;
     opacity: 0;
     transition: all 0.5s ease;
+    background-color: #E58A4C;
 }
 
 .layout {
@@ -456,15 +469,34 @@ body {
     background-image: linear-gradient( to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
 }
 
-@media screen and (max-width: 565px) {
-    .nav-container{margin: 5px;}
+@media screen and (max-width: 600px) {
+    .nav-container{margin: 30px;}
     .photos img{width: 128px;}
     #text{width: 70vw;}
 }
 
+@media screen and (max-width: 500px) {
+    .nav-container{margin: 10px;}
+}
+
+@media screen and (max-width: 450px) {
+    .nav-link{font-size: 13px;}
+}
+
+@media screen and (max-width: 400px) {
+    .nav-container{margin: 5px;}
+}
+
+@media screen and (max-width: 350px) {
+    .nav-container{margin: 3px;}
+    .nav-link{font-size: 12px;}
+}
+
 @media screen and (max-width: 1200px) {
-    .gridItems{padding: 300px 200px; background-size: 400px;}
-    .gridDescription{width: 300px;}
+    .gridItems{width: 24vw; height: 40vw;}
+    .gridDescription{width: 19vw; font-size: .9vw; top: -7.8vw;}
+    .gridName{font-size: 2.8vw;}
+    .gridPrice{bottom: -7.8vw;}
 }
 
 @media screen and (max-width: 1100px) {
@@ -476,38 +508,45 @@ body {
 }
 
 @media screen and (max-width: 850px) {
-    .gridItems{padding: 250px 150px; background-size: 300px;}
-    .gridDescription{width: 250px;}
     .cartMain{width: 50%;}
 }
 
 @media screen and (max-width: 650px) {
-    .gridItems{padding: 166px 100px; background-size: 200px;}
-    .gridName{font-size: x-large;}
-    .gridPrice{font-size: large;}
-    .gridButton{font-size: medium;}
-    .gridDescription{width: 150px; font-size: small;}
     .cartMain{width: 60%;}
+    .gridDescription{top: -7vw;}
 }
 
-@media screen and (max-width: 650px) and (min-height: 1000px) {
+@media screen and (max-width: 850px) and (min-height: 840px) {
     .grid{grid-template-columns: auto;}
-    .gridDescription{width: 150px; font-size: medium;}
-    .gridName{font-size: xx-large;}
-    .gridButton{font-size: x-large;}
-    .gridPrice{font-size: x-large;}
-    .gridItems:nth-child(1) .gridPrice{bottom: 381px;}
-    .gridItems:nth-child(1) .gridButton{bottom: 461px;}
-    .gridItems:nth-child(2) .gridName{top: 381px;}
-    .gridItems:nth-child(2) .gridDescription{top: 431px;}
+    .gridItems{width: 30vw; height: 50vw;}
+    .gridDescription{width: 22vw; font-size: 1vw; top: -10vw;}
+    .gridName{font-size: 3vw;}
+    .gridPrice{bottom: -9vw;}
+    .gridItems:nth-child(1) .gridButton{bottom: 62vw;}
 }
 
-@media screen and (max-width: 850px) and (min-height: 1500px) {
-    .gridItems{padding: 350px 250px;}
+@media screen and (max-width: 600px) and (min-height: 840px) {
     .grid{grid-template-columns: auto;}
-    .gridDescription{width: 350px;}
-    .gridItems:nth-child(1) .gridPrice{bottom: 750px;}
-    .gridItems:nth-child(1) .gridButton{bottom: 830px;}
-    .gridItems:nth-child(2) .gridName{top: 750px;}
-    .gridItems:nth-child(2) .gridDescription{top: 830px;}
+    .gridItems{width: 33vw; height: 55vw;}
+    .gridDescription{width: 22vw; font-size: 1vw; top: -10vw;}
+    .gridName{font-size: 3vw;}
+    .gridPrice{bottom: -9vw;}
+    .gridItems:nth-child(1) .gridButton{bottom: 68vw;}
+}
+
+@media screen and (max-width: 500px) and (min-height: 840px) {
+    .grid{grid-template-columns: auto;}
+    .gridItems{width: 42vw; height: 70vw;}
+    .gridDescription{width: 30vw; font-size: 1.3vw; top: -14vw;}
+    .gridName{font-size: 3.3vw;}
+    .gridPrice{bottom: -14vw; font-size: 2.5vw;}
+    .gridItems:nth-child(1) .gridButton{bottom: 84vw;}
+}
+
+@media screen and (max-width: 450px) and (min-height: 840px) {
+    .gridItems:nth-child(1) .gridButton{bottom: 85vw;}
+}
+
+@media screen and (max-width: 400px) and (min-height: 840px) {
+    .gridItems:nth-child(1) .gridButton{bottom: 86vw;}
 }
